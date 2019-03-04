@@ -1,26 +1,29 @@
-import React, { Component } from 'react';
-import 'materialize-css/dist/css/materialize.min.css'
-import M from 'materialize-css/dist/js/materialize.min.js'
-import './App.css';
+import React from 'react';
 
-class App extends Component {
+import 'materialize-css/dist/css/materialize.min.css'
+import './App.css';
+import Main from './components/main';
+import Footer from './components/footer';
+
+export default class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <>
           <nav>
-            <div className="nav-wrapper">
-              <a href="#" className="brand-logo">Logo</a>
-              <ul id="nav-mobile" className="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+            <div className='nav-wrapper'>
+              <div className='brand-logo center'>Logo</div>
+              <ul id='nav-mobile' className='right hide-on-med-and-down'>
+                <li><a href='{#}'>Crear Tareas</a></li>
+                <li><a href='{#}'>Usuario</a></li>
+                <li><a href='{#}'>Cerrar sesión</a></li>
               </ul>
             </div>
           </nav>
-
-      </div>
+          <Main/>
+          <Footer/>
+      </>
     );
   }
 }
 
-export default App;
+
