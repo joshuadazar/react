@@ -1,6 +1,15 @@
 body {
-  background: tomato;
   color: white;
+  font-size: 16px;
+}
+body #root {
+  background: "#fff";
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+body #root main {
+  flex: 1 0 auto;
 }
 
 /*# sourceMappingURL=App.css.map */

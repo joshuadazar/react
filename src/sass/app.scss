@@ -1,9 +1,9 @@
-
+$white:"#fff";
 body{
-    background:#fff;
     color: white;
     font-size: 16px;
     #root {
+      background:$white;
       display: flex;
       min-height: 100vh;
       flex-direction: column;
