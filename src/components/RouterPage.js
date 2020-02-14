@@ -47,6 +47,7 @@ export default class RouterPage extends Component{
                         <Route path="/productos" component={Productos}/>
                         <Route path="/servicios" render={(props) => <Servicios {...props} edad={this.state.edad}  />} />
                         <Route path="/contacto" component={Contacto}/>
+                        <Route path="/*" component={NoMatch}/>
                     </Switch>
                 </main>
                 
@@ -60,7 +61,17 @@ export default class RouterPage extends Component{
     }
     
 
-
+    function NoMatch(){
+        return(
+            <>
+            <h1 className="center">
+                Página no encontrada <br/>
+                  <b>Page not found</b> <br/>
+                   <a href="/" className="waves-effect btn btn-large">Volver a inicio</a>  
+            </h1>
+            </>
+        );
+    }
 
 
 
