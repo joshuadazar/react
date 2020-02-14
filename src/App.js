@@ -12,7 +12,7 @@ export default class App extends React.Component {
 
     this.state={
         nombre:"Joshua Daza",
-        edad:45
+        edad:80
     };
 }
 

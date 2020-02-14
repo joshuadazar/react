@@ -1,19 +1,18 @@
 import React from 'react';
 import data from '../data/menu';
+import Navigation from './Navigation';
 
 export default class Header extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            ed: this.props.edad +45
+            ed: this.props.edad +45000
         };
     }
     datos(){
-        return data.options.map(option=>{
+        return data.options.map((option, i)=>{
             return(
-                
-                <li><a href='{}'>{option.item}</a></li>
-                
+            <Navigation key={i} option={option.item}/>
             );
         });
         
@@ -28,7 +27,7 @@ export default class Header extends React.Component{
                 {this.state.ed}
                 </div>
                 <ul id='nav-mobile' className='right hide-on-med-and-down'>
-                   {this.datos()}
+                    {this.datos()}
                 </ul>
                 </div>
             </nav>
